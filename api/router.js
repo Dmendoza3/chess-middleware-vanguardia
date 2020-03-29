@@ -5,7 +5,7 @@ const router = app.Router();
 
 
 var nnModelUrl = 'http://chess-keras-model.herokuapp.com';
-var dbUrl = 'http://localhost:3000';
+var dbUrl = 'https://nodemysqlchess.herokuapp.com';
 
 
 router.get('/', (req,res,next)=>{
