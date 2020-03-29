@@ -1,5 +1,4 @@
 const app = require('express');
-const http = require('http');
 const request = require('request');
 
 const router = app.Router();
@@ -9,8 +8,12 @@ var nnModelUrl = 'http://chess-keras-model.herokuapp.com';
 var dbUrl = 'http://localhost:3000';
 
 
+router.get('/', (req,res,next)=>{
+    res.status(200).json({response:'success'});
+});
 
 router.get('/predict', (req, res, next)=>{
+    console.log("Test")
     const options = {
         url: nnModelUrl + '/predict',
         method: 'GET',
