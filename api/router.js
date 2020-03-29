@@ -60,7 +60,7 @@ router.get("/users", (req, res) => {
     const options = {
         url: dbUrl + '/users',
         method: 'GET',
-        json: req.query
+        json: req.body
     };
     request(options, (err, response, body) => {
         if(err)
@@ -75,7 +75,7 @@ router.post('/users', (req, res) => {
     const options = {
         url: dbUrl + '/games',
         method: 'POST',
-        json: req.query
+        json: req.body
     };
     request(options, (err, response, body) => {
         if(err)
